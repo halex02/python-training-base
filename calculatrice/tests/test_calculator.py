@@ -17,14 +17,26 @@ def test_add_positive() -> None:
 def test_add_negative() -> None:
     assert add(-2, 3) == 1
 
+def test_add_two_negative_numbers() -> None:
+    assert add(-2, -3) == -5
+
 def test_add_zero() -> None:
     assert add(0, 0) == 0
 
 def test_subtract() -> None:
     assert subtract(5, 3) == 2
 
+def test_subtract_negative_number() -> None:
+    assert subtract(2, -3) == 5
+
 def test_multiply() -> None:
     assert multiply(4, 3) == 12
+
+def test_multiplyt_negative() -> None:
+    assert multiply(4, -3) == -12
+
+def test_multiply_two_negative_numbers() -> None:
+    assert multiply(-4, -3) == 12
 
 def test_multiply_zero() -> None:
     assert multiply(42, 0) == 0
@@ -41,3 +53,9 @@ def test_divide_float() -> None:
 
 def test_divide_int() -> None:
     assert divide(4, 2) == 2
+
+def test_divide_negative() -> None:
+    assert divide(4, -2) == -2
+
+def test_divide_two_negative_numbers() -> None:
+    assert divide(-4, -2) == 2
