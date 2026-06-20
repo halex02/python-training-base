@@ -3,7 +3,7 @@
 
 import pytest
 
-from modules.calculator import(
+from modules.calculator import (
     DivisionByZeroError,
     add,
     subtract,
@@ -11,8 +11,8 @@ from modules.calculator import(
     divide
 )
 
-def test_add_positive() -> None:
-    assert add(2, 3) == 5
+def test_add_positive() -> None: #un test a toujours ce typage
+    assert add(2, 3) == 5 # un seul assert par test
 
 def test_add_negative() -> None:
     assert add(-2, 3) == 1
@@ -23,6 +23,9 @@ def test_add_two_negative_numbers() -> None:
 def test_add_zero() -> None:
     assert add(0, 0) == 0
 
+def test_add_float() -> None:
+    assert add(2.5, 1.5) == 4.0
+
 def test_subtract() -> None:
     assert subtract(5, 3) == 2
 
@@ -32,7 +35,7 @@ def test_subtract_negative_number() -> None:
 def test_multiply() -> None:
     assert multiply(4, 3) == 12
 
-def test_multiplyt_negative() -> None:
+def test_multiply_negative() -> None:
     assert multiply(4, -3) == -12
 
 def test_multiply_two_negative_numbers() -> None:
